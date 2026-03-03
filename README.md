@@ -1,4 +1,4 @@
-# 📊 QPon Sentiment Analysis
+# QPon Sentiment Analysis
 
 An end-to-end **Natural Language Processing** project analyzing user reviews of the **QPon** app (cashback & coupons) from the Google Play Store. The entire pipeline is built for **Indonesian language text**, covering data collection, text preprocessing, feature extraction, and linguistic analysis.
 
@@ -6,12 +6,12 @@ An end-to-end **Natural Language Processing** project analyzing user reviews of 
 
 ---
 
-## 🎯 Objectives
+## Objectives
 - Build a complete NLP pipeline for Indonesian text from scratch
 - Analyze user sentiment and linguistic patterns in QPon app reviews
 - Extract actionable insights from customer feedback using statistical and machine learning methods
 
-## 📱 App Information
+## App Information
 | | |
 |---|---|
 | **App Name** | QPon |
@@ -20,7 +20,7 @@ An end-to-end **Natural Language Processing** project analyzing user reviews of 
 | **Review Language** | Indonesian |
 | **Total Reviews** | 4,638 |
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 QPon_NLP_PBA/
@@ -39,7 +39,7 @@ QPon_NLP_PBA/
 └── requirements.txt
 ```
 
-## 🚀 Pipeline Overview
+## Pipeline Overview
 
 ### 1. Data Collection & Tokenization
 - Scraped all QPon reviews from Google Play using `google_play_scraper` (`reviews_all()`)
@@ -66,7 +66,7 @@ QPon_NLP_PBA/
 - Part-of-Speech tagging for Indonesian text
 - Linguistic pattern analysis across sentiment categories
 
-## ✅ Progress
+## Progress
 - [x] Data Collection & Tokenization
 - [ ] Text Preprocessing & EDA
 - [ ] Bag of Words
@@ -94,14 +94,14 @@ cd QPon_NLP_PBA
 pip install -r requirements.txt
 ```
 
-## 📚 References
+## References
 - Jurafsky, D. & Martin, J.H. (2023). *Speech and Language Processing* (3rd ed.)
 - Cahyawijaya, S. et al. (2020). *IndoNLU: Benchmark and Resources for Evaluating Indonesian NLP.* ACL 2020.
 - Bird, S., Klein, E. & Loper, E. (2009). *Natural Language Processing with Python.* O'Reilly Media.
 
-## 👤 Author
+## Author
 **Zeldano Shan Oeffie**
 - Information Systems, Institut Teknologi Sepuluh Nopember (ITS)
-- Course: Natural Language Processing (PBA) — Irmasari Hafidz
+- Course: Natural Language Processing (PBA) — Irmasari Hafidz, S.Kom., M.Sc.
 - 📧 kerjaanzeldano@gmail.com
 - 🔗 [GitHub](https://github.com/Zeldano118)
