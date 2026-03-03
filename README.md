@@ -1,106 +1,107 @@
-# 📊 Analisis Sentimen Ulasan QPon — NLP Pipeline (Bahasa Indonesia)
+# 📊 QPon Sentiment Analysis
 
-Proyek end-to-end **Natural Language Processing** untuk menganalisis sentimen ulasan pengguna aplikasi **QPon** (cashback & kupon) dari Google Play Store. Seluruh pipeline dikerjakan dalam Bahasa Indonesia, mulai dari data collection hingga feature extraction dan POS tagging.
+An end-to-end **Natural Language Processing** project analyzing user reviews of the **QPon** app (cashback & coupons) from the Google Play Store. The entire pipeline is built for **Indonesian language text**, covering data collection, text preprocessing, feature extraction, and linguistic analysis.
 
-> 📌 **Dataset:** 4.638 ulasan pengguna QPon | **Bahasa:** Indonesia (`lang='id'`) | **Tools:** Python, NLTK, Sastrawi, scikit-learn
+> **4,638 reviews** scraped from Google Play | **Language:** Indonesian (`lang='id'`) | **Built with:** Python, NLTK, Sastrawi, scikit-learn
 
 ---
 
-## 🎯 Tujuan Proyek
-- Mengimplementasikan pipeline NLP lengkap untuk teks Bahasa Indonesia
-- Menganalisis sentimen dan pola linguistik dalam ulasan aplikasi QPon
-- Mengekstrak insight dari feedback pengguna menggunakan metode statistik dan machine learning
+## 🎯 Objectives
+- Build a complete NLP pipeline for Indonesian text from scratch
+- Analyze user sentiment and linguistic patterns in QPon app reviews
+- Extract actionable insights from customer feedback using statistical and machine learning methods
 
-## 📱 Informasi Aplikasi
+## 📱 App Information
 | | |
 |---|---|
-| **Nama** | QPon |
-| **Google Play** | [QPon di Play Store](https://play.google.com/store/apps/details?id=com.qpon.platform) |
+| **App Name** | QPon |
+| **Google Play** | [View on Play Store](https://play.google.com/store/apps/details?id=com.qpon.platform) |
 | **App ID** | `com.qpon.platform` |
-| **Bahasa Ulasan** | Indonesia |
+| **Review Language** | Indonesian |
+| **Total Reviews** | 4,638 |
 
-## 📁 Struktur Proyek
+## 📁 Project Structure
+
 ```
 QPon_NLP_PBA/
 ├── data/
-│   ├── raw/                                # Data mentah hasil scraping
+│   ├── raw/                                # Raw scraped data
 │   │   └── qpon_reviews_raw.csv
-│   └── processed/                          # Data setelah preprocessing
+│   └── processed/                          # Cleaned & preprocessed data
 │       └── qpon_reviews_preprocessed.csv
 ├── notebooks/
-│   ├── 01_Scraping_Tokenisasi.ipynb        # Week 1: Scraping + Tokenisasi
-│   ├── 02_Preprocessing_EDA.ipynb          # Week 2: Preprocessing + EDA
-│   ├── 03_BOW.ipynb                        # Week 3: Bag of Words
-│   ├── 04_TFIDF.ipynb                      # Week 4: TF-IDF
-│   └── 05_POS_Tagging.ipynb               # Week 5: POS Tagging
+│   ├── 01_Scraping_Tokenisasi.ipynb        # Data collection & tokenization
+│   ├── 02_Preprocessing_EDA.ipynb          # Text preprocessing & EDA
+│   ├── 03_BOW.ipynb                        # Bag of Words
+│   ├── 04_TFIDF.ipynb                      # TF-IDF
+│   └── 05_POS_Tagging.ipynb               # POS Tagging
 ├── README.md
 └── requirements.txt
 ```
 
-## 🚀 Tahapan Proyek
+## 🚀 Pipeline Overview
 
-### Week 1 — Scraping + Tokenisasi
-`01_Scraping_Tokenisasi.ipynb`
-- Scraping seluruh ulasan QPon dari Google Play menggunakan `reviews_all()`
-- Eksplorasi awal: distribusi rating, contoh ulasan per rating
-- Tokenisasi teks Inggris (Korpus Gutenberg / NLTK) dan Indonesia (IndoNLU SMSA / Hugging Face)
-- Demo tokenisasi, stemming (Sastrawi), dan stopword removal pada ulasan QPon
-- **Output:** `data/raw/qpon_reviews_raw.csv` (4.638 ulasan)
+### 1. Data Collection & Tokenization
+- Scraped all QPon reviews from Google Play using `google_play_scraper` (`reviews_all()`)
+- Initial exploration: rating distribution, sample reviews per rating
+- Tokenization on English text (NLTK Gutenberg corpus) and Indonesian text (IndoNLU SMSA dataset)
+- Applied tokenization, stemming (Sastrawi), and stopword removal on QPon reviews
+- **Output:** `data/raw/qpon_reviews_raw.csv`
 
-### Week 2 — Preprocessing + EDA
-`02_Preprocessing_EDA.ipynb`
-- Preprocessing: lowercase, hapus tanda baca, tokenisasi, stopwords, stemming
-- Sentiment labeling: rating 1-2 = Negatif, 3 = Netral, 4-5 = Positif
-- EDA: distribusi sentimen, word cloud, word frequency, tren waktu
+### 2. Text Preprocessing & Exploratory Data Analysis
+- Full preprocessing pipeline: lowercasing, punctuation removal, tokenization, stopword removal, stemming
+- Sentiment labeling based on ratings (1–2 = Negative, 3 = Neutral, 4–5 = Positive)
+- EDA: sentiment distribution, word clouds, word frequency, temporal trends
 - **Output:** `data/processed/qpon_reviews_preprocessed.csv`
 
-### Week 3 — Bag of Words
-`03_BOW.ipynb`
-- Feature extraction menggunakan CountVectorizer
-- Analisis feature matrix dari teks ulasan
+### 3. Feature Extraction — Bag of Words
+- Text vectorization using `CountVectorizer`
+- Feature matrix construction and vocabulary analysis
 
-### Week 4 — TF-IDF
-`04_TFIDF.ipynb`
-- Feature extraction menggunakan TF-IDF
-- Perbandingan hasil dengan Bag of Words
+### 4. Feature Extraction — TF-IDF
+- Term weighting using TF-IDF
+- Comparison with Bag of Words approach
 
-### Week 5 — POS Tagging
-`05_POS_Tagging.ipynb`
-- Part-of-Speech tagging untuk Bahasa Indonesia
-- Analisis pola linguistik per sentimen
+### 5. Linguistic Analysis — POS Tagging
+- Part-of-Speech tagging for Indonesian text
+- Linguistic pattern analysis across sentiment categories
 
 ## ✅ Progress
-- [x] Week 1: Scraping + Tokenisasi
-- [ ] Week 2: Preprocessing + EDA
-- [ ] Week 3: Bag of Words
-- [ ] Week 4: TF-IDF
-- [ ] Week 5: POS Tagging
+- [x] Data Collection & Tokenization
+- [ ] Text Preprocessing & EDA
+- [ ] Bag of Words
+- [ ] TF-IDF
+- [ ] POS Tagging
 
 ## 🛠️ Tech Stack
-| Kategori | Tools |
+| Category | Tools |
 |---|---|
-| **NLP** | NLTK, PySastrawi, Hugging Face datasets |
-| **Scraping** | google-play-scraper |
-| **Data** | Pandas, NumPy |
-| **Feature Extraction** | scikit-learn (CountVectorizer, TF-IDF) |
-| **Visualisasi** | Matplotlib, Seaborn, WordCloud |
+| **NLP & Text Processing** | NLTK, PySastrawi, Hugging Face `datasets` |
+| **Web Scraping** | google-play-scraper |
+| **Data Manipulation** | Pandas, NumPy |
+| **Feature Extraction** | scikit-learn (CountVectorizer, TfidfVectorizer) |
+| **Visualization** | Matplotlib, Seaborn, WordCloud |
 
-## ⚙️ Instalasi
+## ⚙️ Getting Started
+
+### Google Colab (Recommended)
+Open any notebook and click the **"Open in Colab"** badge in the first cell.
+
+### Local Setup
 ```bash
 git clone https://github.com/Zeldano118/QPon_NLP_PBA.git
 cd QPon_NLP_PBA
 pip install -r requirements.txt
 ```
 
-## 📚 Referensi
-- Jurafsky & Martin, *Speech and Language Processing* (3rd ed., 2023)
-- Cahyawijaya et al., *IndoNLU: Benchmark and Resources for Evaluating Indonesian NLP* (ACL 2020)
-- Bird et al., *Natural Language Processing with Python* (NLTK Book, 2009)
+## 📚 References
+- Jurafsky, D. & Martin, J.H. (2023). *Speech and Language Processing* (3rd ed.)
+- Cahyawijaya, S. et al. (2020). *IndoNLU: Benchmark and Resources for Evaluating Indonesian NLP.* ACL 2020.
+- Bird, S., Klein, E. & Loper, E. (2009). *Natural Language Processing with Python.* O'Reilly Media.
 
 ## 👤 Author
 **Zeldano Shan Oeffie**
-- NRP: 5026231118
-- Program Studi: Sistem Informasi, Institut Teknologi Sepuluh Nopember
-- Mata Kuliah: Pengolahan Bahasa Alami (PBA) — Irmasari Hafidz
+- Information Systems, Institut Teknologi Sepuluh Nopember (ITS)
+- Course: Natural Language Processing (PBA) — Irmasari Hafidz
 - 📧 kerjaanzeldano@gmail.com
 - 🔗 [GitHub](https://github.com/Zeldano118)
