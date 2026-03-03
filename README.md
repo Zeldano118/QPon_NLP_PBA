@@ -73,7 +73,7 @@ QPon_NLP_PBA/
 - [ ] TF-IDF
 - [ ] POS Tagging
 
-## 🛠️ Tech Stack
+## Tech Stack
 | Category | Tools |
 |---|---|
 | **NLP & Text Processing** | NLTK, PySastrawi, Hugging Face `datasets` |
@@ -82,7 +82,7 @@ QPon_NLP_PBA/
 | **Feature Extraction** | scikit-learn (CountVectorizer, TfidfVectorizer) |
 | **Visualization** | Matplotlib, Seaborn, WordCloud |
 
-## ⚙️ Getting Started
+## Getting Started
 
 ### Google Colab (Recommended)
 Open any notebook and click the **"Open in Colab"** badge in the first cell.
