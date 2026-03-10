@@ -8,4 +8,4 @@ seaborn
 wordcloud
 scikit-learn
 datasets
-tqdm
+stanza
