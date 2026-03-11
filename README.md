@@ -62,5 +62,5 @@ pip install -r requirements.txt
 
 ## Author
 
-**Zeldano Shan Oeffie** — Information Systems, ITS Surabaya
+**Zeldano Shan Oeffie** — 5026231118
 📧 kerjaanzeldano@gmail.com · [GitHub](https://github.com/Zeldano118)
