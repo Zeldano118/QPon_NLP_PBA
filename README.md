@@ -49,6 +49,12 @@ Run scrapping first, then preprocessing.
 | `2_week4_tfidf_classification.ipynb` | TF-IDF sentiment classification with 5 classifiers (SVM, LogReg, NB, XGBoost, RandomForest) | Yes |
 | `3_week4_tfidf_custom.ipynb` | Custom TF-IDF implementation (from Wittline/tf-idf GitHub) applied to QPon reviews | Yes |
 
+### Week 5 — Text Embedding & Keyword Extraction
+
+| File | Description | Needs CSV? |
+|---|---|---|
+| `week5_text_embedding.ipynb` | Keyword extraction (TF-IDF, RAKE, TextRank), N-gram analysis, regex keyword variations, Sentence-BERT embeddings, clustering & PCA visualization | Yes |
+
 ### How is this different from the main project?
 
 The `notebooks/` folder is the full QPon sentiment analysis pipeline — everything connects end to end, from raw scraping to POS tagging. The `assignments/` folder contains standalone exercises that explore specific NLP techniques in isolation. Some overlap exists (both do EDA, both do TF-IDF), but the assignments follow a different format and scope.
@@ -80,10 +86,12 @@ QPon_NLP_PBA/
 │   │   ├── 1_week3_eda.ipynb
 │   │   ├── 2_week3_yearly.ipynb
 │   │   └── 3_week3_bow_regex.ipynb
-│   └── week 4/
-│       ├── 1_week4_tfidf_summarization.ipynb
-│       ├── 2_week4_tfidf_classification.ipynb
-│       └── 3_week4_tfidf_custom.ipynb
+│   ├── week 4/
+│   │   ├── 1_week4_tfidf_summarization.ipynb
+│   │   ├── 2_week4_tfidf_classification.ipynb
+│   │   └── 3_week4_tfidf_custom.ipynb
+│   └── week 5/
+│       └── week5_text_embedding.ipynb
 ├── README.md
 └── requirements.txt
 ```
@@ -106,6 +114,7 @@ pip install -r requirements.txt
 | **Scraping** | google-play-scraper |
 | **NLP** | NLTK, Sastrawi, Stanza |
 | **ML** | scikit-learn (CountVectorizer, TF-IDF, Naive Bayes, Logistic Regression) |
+| **Embeddings** | sentence-transformers (Sentence-BERT) |
 | **Data** | Pandas, NumPy |
 | **Viz** | Matplotlib, Seaborn, WordCloud |
 
